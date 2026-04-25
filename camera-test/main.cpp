@@ -11,8 +11,7 @@ int main (){
     cv::namedWindow("Test", cv::WINDOW_NORMAL);
     cv::resizeWindow("Test", 800,600);
 
-    video.read(frame);
-
+    
     // cv::Mat gaussian_blur = (cv::Mat_<double>(3, 3) <<
     //     1.0/9, 1.0/9, 1.0/9,
     //     1.0/9, 1.0/9, 1.0/9,

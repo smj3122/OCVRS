@@ -25,14 +25,22 @@ int main (){
     cv::resizeWindow("DEBUG", 866, 600);
 
     //sliders
+    /* Instead of creating a new window sliders Updated the DEBUG WINDOW to have the sliders
     cv::namedWindow("Sliders",cv::WINDOW_GUI_NORMAL);
-    cv::resizeWindow("Sliders", 300,300);
+    cv::resizeWindow("Sliders", 200,200);
     cv::createTrackbar("Hue Min", "Sliders",&hmin,179);
     cv::createTrackbar("Hue Max", "Sliders",&hmax,179);
     cv::createTrackbar("Saturation Min", "Sliders",&smin,255);
     cv::createTrackbar("Saturation Max", "Sliders",&smax,255);
     cv::createTrackbar("Value Min", "Sliders",&vmin,255);
     cv::createTrackbar("Value Max", "Sliders",&vmax,255);
+    */
+    cv::createTrackbar("Hue Min", "DEBUG",&hmin,179);
+    cv::createTrackbar("Hue Max", "DEBUG",&hmax,179);
+    cv::createTrackbar("Saturation Min", "DEBUG",&smin,255);
+    cv::createTrackbar("Saturation Max", "DEBUG",&smax,255);
+    cv::createTrackbar("Value Min", "DEBUG",&vmin,255);
+    cv::createTrackbar("Value Max", "DEBUG",&vmax,255);
 
 
     while (video.isOpened()){

@@ -29,3 +29,16 @@ You can verify installation using:
 pkg-config --modversion opencv4
 pkg-config --modversion sdl2
 ```
+
+Building the binaries (run the following command in respective directory)
+
+```bash
+make
+```
+
+
+Cleaning the build
+
+```bash
+make clean
+```

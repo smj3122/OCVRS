@@ -86,9 +86,17 @@ int main (){
         std::vector<cv::Vec4i> hierarchy;
         cv::findContours(OutputframeClosing,contours, hierarchy,cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
 
-        cv::drawContours(ColoredObj, contours, -1, cv::Scalar(0,255,0),2);
-        cv::drawContours(matDebug, contours, -1, cv::Scalar(0,255,0),2);
+            for(size_t i = 0; i < contours.size(); i++){
+                double area = cv::contourArea(contours[i]);
 
+                if(area >250){
+                    cv::drawContours(ColoredObj, contours, -1, cv::Scalar(0,255,0),2);
+                    cv::drawContours(matDebug, contours, -1, cv::Scalar(0,255,0),2);
+                }       
+
+ 
+            }
+        
 
 
 
@@ -108,3 +116,6 @@ int main (){
 
     return 0;
 }
+
+
+

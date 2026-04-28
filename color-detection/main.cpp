@@ -80,6 +80,19 @@ int main (){
 
         cv::bitwise_and(matDebug,matDebug,ColoredObj,OutputframeClosing);
 
+
+        //===============contours====================
+        std::vector<std::vector<cv::Point>> contours;
+        std::vector<cv::Vec4i> hierarchy;
+        cv::findContours(OutputframeClosing,contours, hierarchy,cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
+
+        cv::drawContours(ColoredObj, contours, -1, cv::Scalar(0,255,0),2);
+        cv::drawContours(matDebug, contours, -1, cv::Scalar(0,255,0),2);
+
+
+
+
+
         cv::imshow("DEBUG",matDebug);
         cv::imshow("OCIRO",mask);
         cv::imshow("Morphologytest", OutputframeClosing);

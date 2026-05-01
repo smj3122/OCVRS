@@ -41,6 +41,7 @@ Cleaning the build
 
 ```bash
 make clean
+
 ```#  **Morphology**
 
 As far as image processing is concerned morphology is about regions and
